@@ -22,16 +22,16 @@ export class HomeView {
 
     renderFeatures(features) {
         if (!this.featuresContainer) return;
-        let html = '<div class="d-flex flex-column flex-md-row">';
+        let html = '<div class="d-flex flex-column flex-md-row w-100 justify-content-between">';
         features.forEach((feature, index) => {
             const isLast = index === features.length - 1;
             const borderClass = isLast ? '' : 'border-bottom border-md-bottom-0 border-md-end';
             html += `
-                <div class="flex-fill p-3 ${borderClass} border-light d-flex align-items-center">
+                <div class="flex-fill p-3 p-md-3 ${borderClass} border-light d-flex align-items-center justify-content-start justify-content-md-center">
                     <div class="feature-icon-wrapper me-3">
                         <i class="bi ${feature.icon}"></i>
                     </div>
-                    <div>
+                    <div class="text-start">
                         <div class="feature-title text-dark">${feature.title}</div>
                         <div class="feature-subtitle">${feature.subtitle}</div>
                     </div>
