@@ -28,12 +28,12 @@ export class HomeView {
             const borderClass = isLast ? '' : 'border-bottom border-md-bottom-0 border-md-end';
             html += `
                 <div class="flex-fill p-3 p-md-3 ${borderClass} border-light d-flex align-items-center justify-content-start justify-content-md-center">
-                    <div class="feature-icon-wrapper me-3">
+                    <div class="text-primary fs-5 me-3">
                         <i class="bi ${feature.icon}"></i>
                     </div>
                     <div class="text-start">
                         <div class="feature-title text-dark">${feature.title}</div>
-                        <div class="feature-subtitle">${feature.subtitle}</div>
+                        <div class="text-secondary small">${feature.subtitle}</div>
                     </div>
                 </div>
             `;
