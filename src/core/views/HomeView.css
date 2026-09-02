@@ -1,6 +1,7 @@
+/* Core Component Styles: HomeView */
+
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: #ffffff;
 }
 
 .navbar .nav-link {
@@ -35,6 +36,7 @@ body {
 .hero-img-container {
     width: 130px;
 }
+
 @media (min-width: 768px) {
     .hero-img-container {
         width: 100% !important;
@@ -51,6 +53,12 @@ body {
     }
 }
 
+@media (max-width: 767.98px) {
+    .hero-image {
+        max-height: 140px;
+    }
+}
+
 .mix-blend-multiply {
     mix-blend-mode: multiply;
 }
@@ -59,19 +67,9 @@ body {
     line-height: 1.15;
 }
 
-.feature-icon-wrapper {
-    color: #2b70fa;
-    font-size: 1.25rem;
-}
-
 .feature-title {
     font-size: 0.9rem;
     font-weight: 600;
-}
-
-.feature-subtitle {
-    font-size: 0.8rem;
-    color: #6c757d;
 }
 
 .category-card {
@@ -102,11 +100,4 @@ body {
 .category-title {
     font-size: 0.85rem;
     font-weight: 500;
-}
-
-/* Mobile overrides */
-@media (max-width: 767.98px) {
-    .hero-image {
-        max-height: 140px;
-    }
 }
