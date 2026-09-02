@@ -17,6 +17,8 @@ export class HomeController {
         // Bind events
         this.view.bindNavigation(this.handleNavigation.bind(this));
         this.view.bindSearch(this.handleSearch.bind(this));
+        this.view.bindProductClick(this.handleProductClick.bind(this));
+        this.view.bindDetailNavigation(this.handleNavigation.bind(this));
     }
 
     handleNavigation(viewName) {
@@ -27,5 +29,14 @@ export class HomeController {
     handleSearch(query) {
         const filteredProducts = this.model.searchProducts(query);
         this.view.renderProducts(filteredProducts);
+    }
+
+    handleProductClick(productId) {
+        const product = this.model.getProductById(productId);
+        if (product) {
+            this.view.renderDetail(product);
+            this.view.showView('detail');
+            window.scrollTo(0, 0);
+        }
     }
 }

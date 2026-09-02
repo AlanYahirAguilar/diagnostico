@@ -49,24 +49,18 @@
     <div id="view-home">
         <!-- Hero Section -->
         <section class="container my-4 my-md-4">
-            <!-- Wrap bg and padding in a div, no .row here to avoid scroll -->
             <div class="bg-light rounded-4 px-4 py-4 p-md-5 hero-bg">
-                <div class="row align-items-center mx-0">
+                <div class="row align-items-center mx-0 position-relative">
                     <div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center px-0">
-                        <!-- Title and mobile image side by side -->
-                        <div class="d-flex flex-row align-items-center mb-2 mb-md-3">
-                            <h1 class="display-5 fw-bold text-dark leading-tight mb-0" style="flex: 1;">Encuentra lo<br>que necesitas</h1>
-                            <div class="d-md-none hero-image-wrapper rounded-4 ms-3 p-2 text-center" style="width: 130px;">
-                                <img src="./src/assets/headphones.jpg" alt="Audifonos" class="img-fluid hero-image mix-blend-multiply">
-                            </div>
-                        </div>
-                        <p class="text-secondary mb-4 fs-6">Productos de calidad al<br>mejor precio.</p>
+                        <h1 class="display-5 fw-bold text-dark leading-tight mb-2 mb-md-3 w-75 w-md-100">Encuentra lo<br>que necesitas</h1>
+                        <p class="text-secondary mb-4 fs-6 w-75 w-md-100">Productos de calidad al<br>mejor precio.</p>
                         <div>
                             <button id="btn-hero-products" class="btn btn-primary px-4 py-2 rounded-3 fw-medium btn-brand">Ver productos</button>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 order-1 order-md-2 text-center text-md-end px-0 d-none d-md-block">
-                        <div class="hero-image-wrapper rounded-4 d-inline-block px-5 py-4">
+                    <!-- Absolute on Mobile, Static on PC (same HTML element) -->
+                    <div class="position-absolute top-0 end-0 mt-3 me-3 mt-md-0 me-md-0 hero-img-container col-md-6 order-1 order-md-2 text-center text-md-end px-0">
+                        <div class="hero-image-wrapper rounded-4 d-inline-block p-2 p-md-4 p-lg-5 w-100 h-100">
                             <img src="./src/assets/headphones.jpg" alt="Audifonos" class="img-fluid hero-image mix-blend-multiply">
                         </div>
                     </div>
@@ -76,7 +70,7 @@
 
         <!-- Features Section -->
         <section class="container mb-5">
-            <div class="bg-white border rounded-4" id="features-container">
+            <div class="bg-white border border-light rounded-4 shadow-sm" id="features-container">
                 <!-- Rendered by JS MVC -->
             </div>
         </section>
@@ -111,11 +105,18 @@
                 <nav>
                     <ul class="pagination pagination-sm">
                         <li class="page-item active"><a class="page-link btn-brand text-white border-0" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link text-dark border-0" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link text-dark border-0" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link text-dark border-0 bg-light ms-2 rounded-3" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link text-dark border-0 bg-light ms-2 rounded-3" href="#">3</a></li>
                     </ul>
                 </nav>
             </div>
+        </section>
+    </div>
+
+    <!-- SPA: DETAIL VIEW -->
+    <div id="view-detail" class="d-none">
+        <section class="container my-4" id="detail-container">
+            <!-- Rendered by JS MVC -->
         </section>
     </div>
 

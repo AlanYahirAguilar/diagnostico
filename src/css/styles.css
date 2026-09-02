@@ -8,25 +8,38 @@ body {
 }
 
 .btn-brand {
-    background-color: #2d6ff7;
-    border-color: #2d6ff7;
+    background-color: #2b70fa;
+    border-color: #2b70fa;
 }
 .btn-brand:hover {
-    background-color: #1e5ce0;
-    border-color: #1e5ce0;
+    background-color: #1a5bed;
+    border-color: #1a5bed;
 }
 
 .hero-bg {
-    background-color: #f7f9fc !important;
+    background-color: #f6f8fb !important;
 }
 
 .hero-image-wrapper {
-    background-color: #eaf0fc;
+    background-color: #e8effd;
 }
 
 .hero-image {
     max-height: 220px;
     object-fit: contain;
+}
+
+/* EXACT SAME HTML FOR HERO, RESPONSIVE POSITIONING */
+.hero-img-container {
+    width: 130px;
+}
+@media (min-width: 768px) {
+    .hero-img-container {
+        width: 100% !important;
+        position: static !important;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+    }
 }
 
 .mix-blend-multiply {
@@ -38,7 +51,7 @@ body {
 }
 
 .feature-icon-wrapper {
-    color: #2d6ff7;
+    color: #2b70fa;
     font-size: 1.25rem;
 }
 
@@ -77,12 +90,6 @@ body {
 .bg-cat-home { background-color: #faf5ed; }
 .bg-cat-accs { background-color: #f4f5f7; }
 
-.category-img {
-    height: 80px;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-}
-
 .category-title {
     font-size: 0.85rem;
     font-weight: 500;
@@ -91,9 +98,6 @@ body {
 /* Mobile overrides */
 @media (max-width: 767.98px) {
     .hero-image {
-        max-height: 160px;
-    }
-    .hero-image-wrapper {
-        padding: 1.5rem !important;
+        max-height: 140px;
     }
 }
