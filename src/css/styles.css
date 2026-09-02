@@ -1,0 +1,99 @@
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #ffffff;
+}
+
+.navbar .nav-link {
+    font-size: 0.9rem;
+}
+
+.btn-brand {
+    background-color: #2d6ff7;
+    border-color: #2d6ff7;
+}
+.btn-brand:hover {
+    background-color: #1e5ce0;
+    border-color: #1e5ce0;
+}
+
+.hero-bg {
+    background-color: #f7f9fc !important;
+}
+
+.hero-image-wrapper {
+    background-color: #eaf0fc;
+}
+
+.hero-image {
+    max-height: 220px;
+    object-fit: contain;
+}
+
+.mix-blend-multiply {
+    mix-blend-mode: multiply;
+}
+
+.leading-tight {
+    line-height: 1.15;
+}
+
+.feature-icon-wrapper {
+    color: #2d6ff7;
+    font-size: 1.25rem;
+}
+
+.feature-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.feature-subtitle {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.category-card {
+    border: 1px solid #f0f0f0;
+    background-color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.category-img-wrapper {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.bg-cat-tech { background-color: #f0f4fd; }
+.bg-cat-home { background-color: #faf5ed; }
+.bg-cat-accs { background-color: #f4f5f7; }
+
+.category-img {
+    height: 80px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.category-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Mobile overrides */
+@media (max-width: 767.98px) {
+    .hero-image {
+        max-height: 160px;
+    }
+    .hero-image-wrapper {
+        padding: 1.5rem !important;
+    }
+}
