@@ -7,9 +7,16 @@ export class HomeModel {
         ];
 
         this.categories = [
-            { id: 1, name: 'Tecnología', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&q=80', bgClass: 'bg-cat-tech' },
-            { id: 2, name: 'Hogar', image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80', bgClass: 'bg-cat-home' },
-            { id: 3, name: 'Accesorios', image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&q=80', bgClass: 'bg-cat-accs' }
+            { id: 1, name: 'Tecnología', image: './src/assets/phones.jpg', bgClass: 'bg-cat-tech' },
+            { id: 2, name: 'Hogar', image: './src/assets/sofa.jpg', bgClass: 'bg-cat-home' },
+            { id: 3, name: 'Accesorios', image: './src/assets/backpack.jpg', bgClass: 'bg-cat-accs' }
+        ];
+
+        this.products = [
+            { id: 1, name: 'Audífonos Inalámbricos', price: 59.99, rating: 4, reviews: 128, image: './src/assets/headphones.jpg' },
+            { id: 2, name: 'Smartwatch Pro', price: 89.99, rating: 4, reviews: 85, image: './src/assets/smartwatch.png' },
+            { id: 3, name: 'Cámara Digital', price: 199.99, rating: 5, reviews: 42, image: './src/assets/camera.jpg' },
+            { id: 4, name: 'Mochila Urbana', price: 39.99, rating: 4, reviews: 210, image: './src/assets/backpack.jpg' }
         ];
     }
 
@@ -19,5 +26,15 @@ export class HomeModel {
 
     getCategories() {
         return this.categories;
+    }
+
+    getProducts() {
+        return this.products;
+    }
+
+    searchProducts(query) {
+        if (!query) return this.products;
+        const lowerQuery = query.toLowerCase();
+        return this.products.filter(p => p.name.toLowerCase().includes(lowerQuery));
     }
 }
