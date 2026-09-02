@@ -1,6 +1,6 @@
-import { HomeModel } from './models/HomeModel.js';
-import { HomeView } from './views/HomeView.js';
-import { HomeController } from './controllers/HomeController.js';
+import { HomeModel } from './core/models/HomeModel.js';
+import { HomeView } from './core/views/HomeView.js';
+import { HomeController } from './core/controllers/HomeController.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const model = new HomeModel();
