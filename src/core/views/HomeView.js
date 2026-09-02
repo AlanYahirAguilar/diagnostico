@@ -148,8 +148,6 @@ export class HomeView {
 
     showView(viewName) {
         this.viewHome.classList.add('d-none');
-        this.viewHome.classList.remove('d-flex');
-        
         this.viewProducts.classList.add('d-none');
         this.viewDetail.classList.add('d-none');
 
@@ -160,7 +158,6 @@ export class HomeView {
 
         if (viewName === 'home') {
             this.viewHome.classList.remove('d-none');
-            this.viewHome.classList.add('d-flex');
             this.navHome.classList.add('active', 'fw-semibold');
             this.navHome.classList.remove('text-secondary');
         } else if (viewName === 'products') {
