@@ -48,11 +48,11 @@ export class HomeView {
         categories.forEach(category => {
             html += `
                 <div class="col-4">
-                    <div class="category-card p-2 p-md-3 rounded-4 text-center h-100 border-0 shadow-sm">
-                        <div class="category-img-wrapper ${category.bgClass} rounded-3">
-                            <img src="${category.image}" alt="${category.name}" class="category-img w-100 h-100 p-2 mix-blend-multiply" style="object-fit:contain;">
+                    <div class="text-center category-item" style="cursor: pointer;">
+                        <div class="category-img-wrapper ${category.bgClass} rounded-4 mb-2 overflow-hidden shadow-sm">
+                            <img src="${category.image}" alt="${category.name}" class="category-img w-100 h-100 mix-blend-multiply" style="object-fit:cover;">
                         </div>
-                        <div class="category-title text-dark fw-semibold" style="font-size: 0.8rem;">${category.name}</div>
+                        <div class="category-title text-dark fw-bold" style="font-size: 0.85rem;">${category.name}</div>
                     </div>
                 </div>
             `;
@@ -78,15 +78,16 @@ export class HomeView {
             html += `
                 <div class="col-12 col-md-6">
                     <div class="card border border-light shadow-sm h-100 rounded-4 product-card" data-id="${product.id}" style="cursor: pointer;">
-                        <div class="card-body p-3">
-                            <div class="bg-light rounded-3 d-flex align-items-center justify-content-center p-3 mb-3" style="height: 160px;">
+                        <div class="card-body p-2 p-md-3 d-flex flex-row flex-md-column align-items-center align-items-md-stretch">
+                            <div class="bg-light rounded-3 d-flex align-items-center justify-content-center p-2 p-md-3 mb-0 mb-md-3 me-3 me-md-0 flex-shrink-0 product-img-wrapper">
                                 <img src="${product.image}" alt="${product.name}" class="img-fluid mix-blend-multiply" style="max-height: 100%; object-fit:contain;">
                             </div>
-                            <h6 class="card-title fw-bold text-dark mb-1 fs-6">${product.name}</h6>
-                            <div class="fw-bold text-dark mb-2">$${product.price}</div>
-                            <div class="d-flex align-items-center mb-1">
-                                <div>${starsHtml}</div>
-                                <span class="ms-2 text-muted small" style="font-size: 0.75rem;">(${product.reviews})</span>
+                            <div class="d-flex flex-column justify-content-center text-start">
+                                <h6 class="card-title fw-bold text-dark mb-1" style="font-size: 0.9rem;">${product.name}</h6>
+                                <div class="fw-bold text-dark mb-1" style="font-size: 0.85rem;">$${product.price}</div>
+                                <div class="d-flex align-items-center">
+                                    <div>${starsHtml}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
