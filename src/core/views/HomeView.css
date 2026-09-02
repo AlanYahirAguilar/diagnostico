@@ -18,11 +18,11 @@ body {
 }
 
 .hero-bg {
-    background-color: #f6f8fb !important;
+    background-color: #f0f4f8 !important;
 }
 
 .hero-image-wrapper {
-    background-color: #e8effd;
+    background-color: transparent;
     width: 100%;
     aspect-ratio: 1 / 1;
     max-width: 320px;
